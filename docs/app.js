@@ -1,0 +1,1 @@
+(function(){var e=document.querySelectorAll(".rv");if(!("IntersectionObserver"in window)){e.forEach(function(x){x.classList.add("in")});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.1});e.forEach(function(x){o.observe(x)})})()
