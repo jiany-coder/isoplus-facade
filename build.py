@@ -15,7 +15,7 @@ P = [CDN + x for x in ["IMG_4330-1920w.jpeg", "a3b37b54_97cb_4489_bc5a_b8eaf0763
      "ea238c2a_e323_400d_be69_c418081a6e56-1920w.jpeg", "IMG_6542-1920w.jpeg",
      "f317561b_fb0f_49fb_9043_7d4b114c21be-1920w.jpeg", "42200213_299605053957411_1372242197100888064_n-1920w.jpg"]]
 TODAY = datetime.date.today().isoformat()
-DESC = "ISO + est une entreprise de ravalement de façade, peinture extérieure et isolation thermique par l'extérieur basée à Barentin, qui intervient dans toute la Seine-Maritime, certifiée RGE Qualibat."
+DESC = "ISO + est une entreprise de ravalement de façade, peinture extérieure et isolation thermique par l'extérieur basée à Barentin, qui intervient pour les particuliers, les professionnels, le tertiaire et les collectivités dans toute la Seine-Maritime, certifiée RGE Qualibat."
 
 SERV = [
  dict(slug="ravalement-facade-rouen", nom="Ravalement de façade", kw="Ravalement de façade à Rouen", ic="🏠", img=P[0],
@@ -72,6 +72,16 @@ SERV = [
        ("Est-ce éligible aux aides ?", "Oui, avec une entreprise RGE, selon les dispositifs en vigueur. Vérifiez sur france-renov.gouv.fr."),
        ("Quel gain de confort ?", "La sensation de sol froid disparaît et les pertes de chaleur par le sol sont réduites."),
        ("Faut-il libérer le sous-sol ?", "Il faut dégager l'accès au plafond. Nous vous indiquons quoi déplacer avant le chantier.")]),
+ dict(slug="facade-isolation-professionnels-rouen", nom="Bâtiments professionnels et collectifs", kw="Façade et isolation de bâtiments pro à Rouen", ic="🏢", img=P[3],
+  court="Tertiaire, collectivités, copropriétés et bâtiments collectifs : ravalement, peinture et ITE.",
+  defi="La rénovation de façade de bâtiments professionnels et collectifs regroupe le ravalement, la peinture et l'isolation thermique par l'extérieur des bureaux, commerces, locaux d'activité, bâtiments publics et immeubles en copropriété.",
+  direct="ISO + rénove et isole les façades des bâtiments professionnels et collectifs en Seine-Maritime : bureaux et locaux tertiaires, commerces, bâtiments de collectivités, écoles, résidences et copropriétés. Entreprise certifiée RGE Qualibat et garantie décennale, avec devis écrit gratuit et planning adapté à l'occupation des locaux.",
+  etapes=["Visite technique et relevé des façades", "Devis détaillé par lot, adapté aux appels d'offres", "Installation de chantier et sécurisation des accès du public", "Travaux par phases pour limiter la gêne", "Réception et dossier des ouvrages"],
+  faq=[("Travaillez-vous pour les collectivités ?", "Oui, ISO + répond aux consultations des communes et organismes publics pour le ravalement, la peinture et l'isolation de leurs bâtiments."),
+       ("Intervenez-vous sur des copropriétés ?", "Oui. Nous fournissons un devis détaillé présentable en assemblée générale et organisons le chantier avec le syndic."),
+       ("Peut-on travailler sans fermer les locaux ?", "Oui dans la plupart des cas : le chantier est découpé en phases et les accès sont sécurisés pour le public et les salariés."),
+       ("L'isolation de bâtiments tertiaires est-elle aidée ?", "Des primes énergie (CEE) existent pour certains travaux d'isolation des bâtiments tertiaires. Les conditions évoluent : nous vous orientons lors du devis.")]),
+
 ]
 
 # communes : nom, secteur, distance approx. depuis Barentin (km), particularité
@@ -128,6 +138,7 @@ BLOG = [
 ]
 
 GFAQ = [("Quelles zones couvrez-vous ?", "ISO + intervient dans toute la Seine-Maritime, en priorité à Rouen et dans la Métropole : plateau Est (Le Mesnil-Esnard, Franqueville-Saint-Pierre, Bonsecours, Belbeuf, Boos), plateau Nord et Ouest (Mont-Saint-Aignan, Bois-Guillaume, Isneauville, Quincampoix, Houppeville), vallée du Cailly et rive gauche, depuis notre siège de Barentin."),
+        ("Travaillez-vous pour les professionnels et collectivités ?", "Oui, ISO + intervient sur les bureaux, commerces, locaux d'activité, bâtiments publics, écoles et copropriétés, en plus des maisons individuelles."),
         ("Le devis est-il gratuit ?", "Oui, la visite et le devis écrit sont gratuits et sans engagement."),
         ("Êtes-vous certifiés RGE ?", "Oui, ISO + est certifiée RGE Qualibat, ce qui ouvre droit aux aides de l'État pour l'isolation."),
         ("Vos travaux sont-ils garantis ?", "Oui, nos travaux sont couverts par la garantie décennale (10 ans)."),
@@ -195,7 +206,7 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 {''.join('<script type="application/ld+json">'+json.dumps(s,ensure_ascii=False)+'</script>' for s in sch)}</head><body>
 <div class="top"><div class="w"><span class="z">📍 Intervention dans <b>toute la Seine-Maritime (76)</b> · Devis gratuit et sans engagement</span></div></div>
 <header><div class="w"><a class="logo" href="/"><img class="lgi" src="{LOGO}" alt="Logo ISO + façade et isolation" width="56" height="56"></a>
-<nav id="nav"><a href="/">Accueil</a><div class="dd"><a href="/#services">Prestations ▾</a><div>{servs}</div></div><a href="/communes/">Communes</a><a href="/blog/">Conseils</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+<nav id="nav"><a href="/">Accueil</a><div class="dd"><a href="/#services">Prestations ▾</a><div>{servs}</div></div><a href="/facade-isolation-professionnels-rouen/">Professionnels</a><a href="/communes/">Communes</a><a href="/blog/">Conseils</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
 <a class="call" href="tel:{TELI}"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Appeler maintenant</a><button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('on')">☰</button></div></header>
 <main>{body}</main>
 <section class="fin"><div class="w"><div class="fmw"><img class="fm" src="/mascotte.svg?v=8" alt="Mascotte ISO +" width="150" height="190" loading="lazy"><img class="vlogo" src="{LOGO}" alt=""></div><h2>Votre façade mérite le meilleur</h2><p>Visite, diagnostic et devis écrit gratuits. Travaux garantis 10 ans.</p><div class="cta"><a class="btn d" href="/contact/">Demander mon devis gratuit</a><a class="btn o" href="tel:{TELI}">📞 {TEL}</a></div></div></section>
@@ -229,9 +240,9 @@ def build():
     shutil.rmtree(D, ignore_errors=True); os.makedirs(D)
     open(f"{D}/style.css","w").write(CSS); open(f"{D}/mascotte.svg","w").write(open("mascot.svg").read().replace("LOGO",LOGO)); open(f"{D}/app.js","w").write('(function(){var e=document.querySelectorAll(".rv");if(!("IntersectionObserver"in window)){e.forEach(function(x){x.classList.add("in")});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.1});e.forEach(function(x){o.observe(x)})})()')
     # accueil
-    b = hero(P[0], "Ravalement de façade et isolation <span>à Rouen</span>", "ISO + rénove, repeint et isole les façades des maisons de Rouen et de toute la Seine-Maritime. Entreprise certifiée RGE Qualibat, basée à Barentin.",
-             ["Ravalement, peinture extérieure, nettoyage, bardage", "Isolation thermique par l'extérieur éligible aux aides", "Visite et devis écrit gratuits, garantie décennale"], masc=True) + STATS
-    b += f'<section id="services"><div class="w"><h2>Nos prestations façade et isolation</h2><p style="margin-bottom:30px">Un seul interlocuteur du diagnostic à la réception du chantier, pour toute la Métropole rouennaise.</p>{cards()}</div></section>'
+    b = hero(P[0], "Ravalement de façade et isolation <span>à Rouen</span>", "ISO + rénove, repeint et isole les façades des maisons, bâtiments professionnels, tertiaires et collectifs à Rouen et dans toute la Seine-Maritime. Entreprise certifiée RGE Qualibat, basée à Barentin.",
+             ["Particuliers, entreprises, collectivités et copropriétés", "Ravalement, peinture extérieure, nettoyage, bardage", "Isolation thermique par l'extérieur éligible aux aides", "Visite et devis écrit gratuits, garantie décennale"], masc=True) + STATS
+    b += f'<section id="services"><div class="w"><h2>Nos prestations façade et isolation</h2><p style="margin-bottom:30px">Maisons individuelles, bâtiments tertiaires, collectivités et copropriétés : un seul interlocuteur du diagnostic à la réception du chantier.</p>{cards()}</div></section>'
     b += f'<section class="bg"><div class="w g2"><div><h2>Pourquoi isoler par l\'extérieur pendant votre ravalement ?</h2><p>{SERV[2]["direct"]}</p><div class="box"><b>Bon à savoir :</b> l\'échafaudage est monté une seule fois. Ravalement et isolation dans le même chantier, c\'est moins de frais et une façade neuve.</div><a class="btn" href="/isolation-thermique-exterieur-rouen/">Découvrir l\'ITE</a></div><img class="ph" src="{P[2]}" alt="Isolation thermique par l\'extérieur d\'une maison près de Rouen" loading="lazy"></div></section>'
     b += f'<section class="dark"><div class="w"><h2>Comment se passe votre projet ?</h2><p style="margin-bottom:30px">Quatre étapes simples, sans surprise.</p>{STEPS}</div></section>'
     b += '<section><div class="w g2"><div class="urg"><h2>Le climat normand use vos façades</h2><p>Pluie fréquente, humidité, mousses et vent sur les plateaux : un enduit fissuré laisse entrer l\'eau, et un mur humide isole mal. Un diagnostic gratuit permet de savoir s\'il faut nettoyer, repeindre, ravaler ou isoler.</p></div><div><h3>💧 Humidité et infiltrations</h3><p>Fissures et enduits poreux laissent passer l\'eau.</p><h3>🌿 Mousses et lichens</h3><p>Ils noircissent la façade et dégradent le support.</p><h3>🌬️ Vent des plateaux</h3><p>Il refroidit les murs mal isolés et augmente le chauffage.</p></div></div></section>'
