@@ -227,7 +227,7 @@ STEPS = '<div class="steps"><div><h3>Appel ou formulaire</h3><p>Vous décrivez v
 def build():
     global PAGES; PAGES = []
     shutil.rmtree(D, ignore_errors=True); os.makedirs(D)
-    open(f"{D}/style.css","w").write(CSS); open(f"{D}/mascotte.svg?v=8","w").write(open("mascot.svg").read().replace("LOGO",LOGO)); open(f"{D}/app.js","w").write('(function(){var e=document.querySelectorAll(".rv");if(!("IntersectionObserver"in window)){e.forEach(function(x){x.classList.add("in")});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.1});e.forEach(function(x){o.observe(x)})})()')
+    open(f"{D}/style.css","w").write(CSS); open(f"{D}/mascotte.svg","w").write(open("mascot.svg").read().replace("LOGO",LOGO)); open(f"{D}/app.js","w").write('(function(){var e=document.querySelectorAll(".rv");if(!("IntersectionObserver"in window)){e.forEach(function(x){x.classList.add("in")});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.1});e.forEach(function(x){o.observe(x)})})()')
     # accueil
     b = hero(P[0], "Ravalement de façade et isolation <span>à Rouen</span>", "ISO + rénove, repeint et isole les façades des maisons de Rouen et de toute la Seine-Maritime. Entreprise certifiée RGE Qualibat, basée à Barentin.",
              ["Ravalement, peinture extérieure, nettoyage, bardage", "Isolation thermique par l'extérieur éligible aux aides", "Visite et devis écrit gratuits, garantie décennale"], masc=True) + STATS
