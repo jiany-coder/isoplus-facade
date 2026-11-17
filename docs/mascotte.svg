@@ -17,7 +17,6 @@
 <path d="M110 206l40 64 40-64" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
 <path d="M58 200c18 50 54 76 92 76s74-26 92-76" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/>
 <circle cx="150" cy="268" r="33" fill="#fff"/>
-<image href="https://le-de.cdn-website.com/bea612ec7d6549328000bbc9921d1975/dms3rep/multi/opt/img_0002-fb5c36fe-1920w.jpeg" x="120" y="238" width="60" height="60" clip-path="url(#lc)" preserveAspectRatio="xMidYMid slice"/>
 <path d="M58 106c4-54 46-86 92-86s88 32 92 86z" fill="url(#hm)"/>
 <rect x="44" y="100" width="212" height="18" rx="9" fill="#3a9e1f"/>
 <path d="M142 22h16v84h-16z" fill="#6fd84a"/>
