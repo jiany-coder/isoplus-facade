@@ -157,7 +157,7 @@ header{position:sticky;top:10px;z-index:50;height:0}header .w{display:flex;align
 nav{display:flex;gap:26px;align-items:center}nav a{color:var(--k);text-decoration:none;font-weight:600;font-size:.95rem}nav a:hover{color:var(--bd)}
 .dd{position:relative}.dd>div{display:none;position:absolute;top:100%;left:-14px;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.14);border-radius:18px;padding:12px;min-width:300px}.dd:hover>div{display:block}.dd>div a{display:block;padding:9px 12px;border-radius:10px}.dd>div a:hover{background:var(--g)}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--b);color:var(--k)!important;font-weight:800;padding:15px 26px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:.25s;font-family:Inter}.btn:hover{background:#fff;box-shadow:0 0 0 2px var(--b) inset;transform:translateY(-2px)}
-.btn.a{background:var(--b)}.btn.o{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.55);color:#fff!important;backdrop-filter:blur(6px)}.btn.o:hover{background:#fff;color:var(--k)!important}.btn.d{background:var(--k);color:#fff!important}
+.btn.a{background:var(--b)}.btn.o{background:linear-gradient(180deg,#6bd94a,#3fae22);color:#fff!important;box-shadow:0 8px 22px rgba(63,174,34,.45),inset 0 1px 0 rgba(255,255,255,.35)}.btn.o:hover{background:linear-gradient(180deg,#7be35a,#46bb27);box-shadow:0 12px 28px rgba(63,174,34,.55)}.btn.d{background:var(--k);color:#fff!important}
 .call{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#45bbff,#1c95e6);color:#fff;font-weight:700;font-size:1rem;padding:14px 24px;border-radius:14px;text-decoration:none;box-shadow:0 8px 22px rgba(48,175,255,.45),inset 0 1px 0 rgba(255,255,255,.35);transition:.2s}.call:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(48,175,255,.55)}.top a{display:inline-flex;align-items:center;gap:6px}.burger{display:none;background:none;border:0;font-size:1.7rem;padding:0 12px}
 .hero{position:relative;color:#fff;padding:190px 0 90px;min-height:92vh;display:flex;align-items:flex-end;background:#222 center/cover no-repeat}
 .hero:after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(to top,rgba(0,0,0,.55),transparent)}
@@ -202,7 +202,7 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{P[0]}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=10"><link rel="icon" href="{LOGO}">
+<link rel="stylesheet" href="/style.css?v=11"><link rel="icon" href="{LOGO}">
 {''.join('<script type="application/ld+json">'+json.dumps(s,ensure_ascii=False)+'</script>' for s in sch)}</head><body>
 <div class="top"><div class="w"><span class="z">📍 Intervention dans <b>toute la Seine-Maritime (76)</b> · Devis gratuit et sans engagement</span></div></div>
 <header><div class="w"><a class="logo" href="/"><img class="lgi" src="{LOGO}" alt="Logo ISO + façade et isolation" width="56" height="56"></a>
