@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jiany-coder.github.io/isoplus-facade/sitemap.xml

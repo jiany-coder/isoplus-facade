@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Générateur statique ISO+ : python3 build.py -> dist/
 import os, json, shutil, datetime
-D = "dist"
-SITE = "https://isoplus-facade.pages.dev"
+D = "docs"
+BASE = "/isoplus-facade"
+SITE = "https://jiany-coder.github.io/isoplus-facade"
 NOM = "ISO +"
 TEL = "06 84 59 40 47"; TELI = "+33684594047"
 MAIL = "isopluscontact1@gmail.com"
@@ -193,7 +194,7 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 <div><h3>Prestations</h3>{servs}</div><div><h3>Communes</h3>{''.join(f'<a href="/{slugc(c[0])}/">Façade {c[0]}</a>' for c in COM[:8])}<a href="/communes/">Toutes les communes →</a></div>
 <div><h3>Contact</h3><a href="tel:{TELI}">📞 {TEL}</a><a href="mailto:{MAIL}">✉️ {MAIL}</a><p>{ADR}</p><p>Lun-Sam : 9h-18h</p><a href="/contact/">Formulaire de devis</a><a href="/mentions-legales/">Mentions légales</a></div></div></footer>
 <div class="bar"><a href="tel:{TELI}">📞 Appeler</a><a href="/contact/">Devis gratuit</a></div></body></html>"""
-    f = os.path.join(D, path); os.makedirs(os.path.dirname(f), exist_ok=True); open(f,"w").write(html)
+    html = html.replace('href="/', 'href="'+BASE+'/').replace(BASE+'//', '//'); f = os.path.join(D, path); os.makedirs(os.path.dirname(f), exist_ok=True); open(f,"w").write(html)
     PAGES.append(url)
 
 LB = {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","@id":SITE+"/#entreprise","name":NOM,"description":DESC,"url":SITE+"/","telephone":TELI,"email":MAIL,"image":P[0],"logo":LOGO,
