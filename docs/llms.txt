@@ -1,5 +1,5 @@
 # ISO +
-> ISO + est une entreprise de ravalement de façade, peinture extérieure et isolation thermique par l'extérieur basée à Barentin, qui intervient à Rouen et dans toute la Métropole, certifiée RGE Qualibat.
+> ISO + est une entreprise de ravalement de façade, peinture extérieure et isolation thermique par l'extérieur basée à Barentin, qui intervient dans toute la Seine-Maritime, certifiée RGE Qualibat.
 
 - [Ravalement de façade à Rouen](https://jiany-coder.github.io/isoplus-facade/ravalement-facade-rouen/)
 - [Peinture de façade à Rouen](https://jiany-coder.github.io/isoplus-facade/peinture-exterieure-rouen/)

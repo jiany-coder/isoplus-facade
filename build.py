@@ -15,7 +15,7 @@ P = [CDN + x for x in ["IMG_4330-1920w.jpeg", "a3b37b54_97cb_4489_bc5a_b8eaf0763
      "ea238c2a_e323_400d_be69_c418081a6e56-1920w.jpeg", "IMG_6542-1920w.jpeg",
      "f317561b_fb0f_49fb_9043_7d4b114c21be-1920w.jpeg", "42200213_299605053957411_1372242197100888064_n-1920w.jpg"]]
 TODAY = datetime.date.today().isoformat()
-DESC = "ISO + est une entreprise de ravalement de façade, peinture extérieure et isolation thermique par l'extérieur basée à Barentin, qui intervient à Rouen et dans toute la Métropole, certifiée RGE Qualibat."
+DESC = "ISO + est une entreprise de ravalement de façade, peinture extérieure et isolation thermique par l'extérieur basée à Barentin, qui intervient dans toute la Seine-Maritime, certifiée RGE Qualibat."
 
 SERV = [
  dict(slug="ravalement-facade-rouen", nom="Ravalement de façade", kw="Ravalement de façade à Rouen", ic="🏠", img=P[0],
@@ -127,44 +127,44 @@ BLOG = [
   tab=[("Saison","Conditions","Conseil"),("Printemps","Variable","Possible fin avril à juin"),("Été","Idéal","Éviter les fortes chaleurs"),("Automne","Possible en septembre","Surveiller la pluie"),("Hiver","Défavorable","À éviter")]),
 ]
 
-GFAQ = [("Quelles zones couvrez-vous ?", "ISO + intervient à Rouen et dans toute la Métropole : plateau Est (Le Mesnil-Esnard, Franqueville-Saint-Pierre, Bonsecours, Belbeuf, Boos), plateau Nord et Ouest (Mont-Saint-Aignan, Bois-Guillaume, Isneauville, Quincampoix, Houppeville), vallée du Cailly et rive gauche, depuis notre siège de Barentin."),
+GFAQ = [("Quelles zones couvrez-vous ?", "ISO + intervient dans toute la Seine-Maritime, en priorité à Rouen et dans la Métropole : plateau Est (Le Mesnil-Esnard, Franqueville-Saint-Pierre, Bonsecours, Belbeuf, Boos), plateau Nord et Ouest (Mont-Saint-Aignan, Bois-Guillaume, Isneauville, Quincampoix, Houppeville), vallée du Cailly et rive gauche, depuis notre siège de Barentin."),
         ("Le devis est-il gratuit ?", "Oui, la visite et le devis écrit sont gratuits et sans engagement."),
         ("Êtes-vous certifiés RGE ?", "Oui, ISO + est certifiée RGE Qualibat, ce qui ouvre droit aux aides de l'État pour l'isolation."),
         ("Vos travaux sont-ils garantis ?", "Oui, nos travaux sont couverts par la garantie décennale (10 ans)."),
         ("Quels sont vos horaires ?", "Du lundi au samedi, de 9 h à 18 h."),
         ("Pouvez-vous m'aider pour les aides MaPrimeRénov' ?", "Oui, nous vous accompagnons dans le montage des dossiers d'aides pour votre isolation par l'extérieur.")]
 
-CSS = """:root{--b:#30AFFF;--bd:#0b7fd1;--k:#121417;--k2:#1d2126;--g:#f4f6f8;--t:#3d434a;--r:14px}
+CSS = """:root{--b:#0A4FCB;--bd:#083c9c;--o:#F5A524;--k:#14141A;--k2:#1f2a44;--g:#EEF2FA;--t:#4a4a52;--r:18px}
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;color:var(--t);line-height:1.65;background:#fff}
-h1,h2,h3,.logo b{font-family:Barlow,sans-serif;color:var(--k);line-height:1.15;font-weight:800}h1{font-size:clamp(2rem,5vw,3.4rem)}h2{font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:.6em}h3{font-size:1.2rem;margin-bottom:.4em}
+h1,h2,h3,.logo b{font-family:Manrope,sans-serif;color:var(--k);line-height:1.15;font-weight:800}h1{font-size:clamp(2rem,5vw,3.4rem)}h2{font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:.6em;letter-spacing:-.02em}section>.w>h2:before,.prose>h2:first-child:before{content:"ISO + FAÇADE";display:block;font-size:.75rem;letter-spacing:.18em;color:var(--o);margin-bottom:8px}.dark h2:before{color:var(--o)}h3{font-size:1.2rem;margin-bottom:.4em}
 a{color:var(--bd)}img{max-width:100%;display:block}.w{max-width:1180px;margin:auto;padding:0 20px}section{padding:80px 0}
-.top{background:var(--k);color:#cfd6dd;font-size:.85rem;padding:7px 0}.top .w{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.top a{color:#fff;font-weight:700;text-decoration:none}
+.top{background:var(--b);color:#cfd6dd;font-size:.85rem;padding:7px 0}.top .w{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.top a{color:#fff;font-weight:700;text-decoration:none}
 header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 18px rgba(0,0,0,.07)}header .w{display:flex;align-items:center;justify-content:space-between;height:74px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}.logo img{height:52px;width:auto;border-radius:6px}.logo b{font-size:1.4rem}
 nav{display:flex;gap:22px;align-items:center}nav a{color:var(--k);text-decoration:none;font-weight:600;font-size:.95rem}nav a:hover{color:var(--bd)}
 .dd{position:relative}.dd>div{display:none;position:absolute;top:100%;left:-14px;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.12);border-radius:10px;padding:10px;min-width:280px}.dd:hover>div{display:block}.dd>div a{display:block;padding:8px 10px;border-radius:6px}.dd>div a:hover{background:var(--g)}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--b);color:#fff!important;font-weight:700;padding:14px 24px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:.2s}.btn:hover{background:var(--bd);transform:translateY(-2px)}
-.btn.o{background:transparent;border:2px solid #fff}.btn.o:hover{background:#fff;color:var(--k)!important}.btn.d{background:var(--k)}
+.btn.a{background:var(--o);color:var(--k)!important}.btn.a:hover{background:#e0911a}.btn.o{background:transparent;border:2px solid #fff}.btn.o:hover{background:#fff;color:var(--k)!important}.btn.d{background:var(--k)}
 .burger{display:none;background:none;border:0;font-size:1.8rem}
-.hero{position:relative;color:#fff;padding:110px 0 120px;background:var(--k) center/cover}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,12,15,.92) 30%,rgba(10,12,15,.45))}.hero .w{position:relative}.hero h1{color:#fff;max-width:760px}.hero h1 span{color:var(--b)}
-.hero p.l{font-size:1.15rem;max-width:620px;margin:18px 0;color:#e3e8ee}.hero ul{list-style:none;margin:18px 0 28px}.hero li{margin:6px 0}.hero li:before{content:"✓";color:var(--b);font-weight:900;margin-right:10px}.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero{position:relative;color:#fff;padding:110px 0 120px;background:var(--k) center/cover}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,30,80,.93) 30%,rgba(10,79,203,.45))}.hero .w{position:relative}.hero h1{color:#fff;max-width:760px}.hero h1 span{color:var(--o)}
+.hero p.l{font-size:1.15rem;max-width:620px;margin:18px 0;color:#e3e8ee}.hero ul{list-style:none;margin:18px 0 28px}.hero li{margin:6px 0}.hero li:before{content:"✓";color:var(--o);font-weight:900;margin-right:10px}.cta{display:flex;gap:14px;flex-wrap:wrap}
 .crumb{font-size:.85rem;color:#cfd6dd;margin-bottom:14px}.crumb a{color:#fff}
-.stats{background:var(--b);padding:0}.stats .w{display:grid;grid-template-columns:repeat(5,1fr);text-align:center}.stats div div{padding:26px 10px;color:#fff;font-weight:600;font-size:.9rem}.stats b{display:block;font-family:Barlow;font-size:1.7rem}
+.stats{background:var(--k);padding:0}.stats .w{display:grid;grid-template-columns:repeat(5,1fr);text-align:center}.stats div div{padding:26px 10px;color:#fff;font-weight:600;font-size:.9rem}.stats b{display:block;color:var(--o);font-family:Manrope;font-size:1.7rem}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.07);transition:.25s;display:flex;flex-direction:column}.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.12)}
-.card img{height:200px;object-fit:cover;width:100%}.card .in{padding:22px;flex:1;display:flex;flex-direction:column}.card .n{font-family:Barlow;color:var(--b);font-weight:800}.card a.m{margin-top:auto;font-weight:700;text-decoration:none}
+.card img{height:200px;object-fit:cover;width:100%}.card .in{padding:22px;flex:1;display:flex;flex-direction:column}.card .n{font-family:Manrope;color:var(--o);font-weight:800}.card a.m{margin-top:auto;font-weight:700;text-decoration:none}
 .bg{background:var(--g)}.dark{background:var(--k);color:#c9d1d9}.dark h2,.dark h3{color:#fff}
 .urg{background:linear-gradient(120deg,var(--k2),var(--k));color:#dfe5ea;border-radius:20px;padding:44px}.urg h2{color:#fff}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}.steps div{background:#fff;padding:24px;border-radius:var(--r);border-top:4px solid var(--b)}.steps div:before{counter-increment:s;content:"0" counter(s);font-family:Barlow;font-weight:800;font-size:2rem;color:var(--b)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}.steps div{background:#fff;padding:24px;border-radius:var(--r);border-top:4px solid var(--o)}.steps div:before{counter-increment:s;content:"0" counter(s);font-family:Manrope;font-weight:800;font-size:2rem;color:var(--o)}
 .dark .steps div{background:var(--k2)}
 .tags{display:flex;flex-wrap:wrap;gap:10px}.tags a{background:#fff;border:1px solid #dde3e9;padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--k);font-weight:600;font-size:.9rem}.tags a:hover{border-color:var(--b);color:var(--bd)}
-.faq details{background:#fff;border-radius:12px;padding:18px 22px;margin-bottom:12px;box-shadow:0 3px 14px rgba(0,0,0,.05)}.faq summary{font-weight:700;color:var(--k);cursor:pointer;font-family:Barlow;font-size:1.1rem}.faq p{margin-top:10px}
+.faq details{background:#fff;border-radius:12px;padding:18px 22px;margin-bottom:12px;box-shadow:0 3px 14px rgba(0,0,0,.05)}.faq summary{font-weight:700;color:var(--k);cursor:pointer;font-family:Manrope;font-size:1.1rem}.faq p{margin-top:10px}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:#fff;border-radius:12px;overflow:hidden}th{background:var(--k);color:#fff;text-align:left}th,td{padding:12px 14px;border-bottom:1px solid #e6eaee}
 .prose{max-width:820px}.prose h2{margin-top:1.4em}.prose p,.prose ul,.prose ol{margin:.8em 0}.prose li{margin-left:1.2em}
-.box{background:var(--g);border-left:4px solid var(--b);padding:18px 22px;border-radius:10px;margin:20px 0}
+.box{background:var(--g);border-left:4px solid var(--o);padding:18px 22px;border-radius:10px;margin:20px 0}
 .trust{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:20px}.trust img{height:70px;background:#fff;padding:6px;border-radius:8px}
 form{display:grid;gap:12px}input,textarea,select{width:100%;padding:14px;border:1px solid #d5dbe1;border-radius:10px;font:inherit}
-.fin{background:linear-gradient(120deg,var(--b),var(--bd));color:#fff;text-align:center}.fin h2{color:#fff}.fin .cta{justify-content:center;margin-top:20px}
+.fin{background:linear-gradient(120deg,var(--b),#062f7a);color:#fff;text-align:center}.fin h2{color:#fff}.fin .cta{justify-content:center;margin-top:20px}
 footer{background:#0c0e11;color:#9aa4ae;padding:60px 0 100px;font-size:.92rem}footer .w{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}footer h3{color:#fff;font-size:1rem}footer a{color:#c9d1d9;text-decoration:none;display:block;margin:4px 0}footer a:hover{color:var(--b)}
 .bar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;grid-template-columns:1fr 1fr}.bar a{padding:16px;text-align:center;color:#fff;font-weight:700;text-decoration:none}.bar a:first-child{background:var(--k)}.bar a:last-child{background:var(--b)}
 @media(max-width:960px){nav{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;align-items:flex-start;box-shadow:0 10px 20px rgba(0,0,0,.1)}nav.on{display:flex}.dd>div{position:static;display:block;box-shadow:none;padding:0 0 0 10px}.burger{display:block}header .btn{display:none}
@@ -181,16 +181,16 @@ def page(path, title, desc, body, schema=None, crumbs=None):
     html = f"""<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{P[0]}"><meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css"><link rel="icon" href="{LOGO}">
 {''.join('<script type="application/ld+json">'+json.dumps(s,ensure_ascii=False)+'</script>' for s in sch)}</head><body>
-<div class="top"><div class="w"><span class="z">📍 Rouen, plateaux Est et Nord, Métropole · Devis gratuit et sans engagement</span><span>Lun-Sam 9h-18h · <a href="tel:{TELI}">📞 {TEL}</a></span></div></div>
-<header><div class="w"><a class="logo" href="/"><img src="{LOGO}" alt="Logo ISO + façade et isolation Rouen" width="52" height="52"><b>ISO +</b></a>
+<div class="top"><div class="w"><span class="z">📍 Intervention dans toute la Seine-Maritime (76) · Devis gratuit et sans engagement</span><span>Lun-Sam 9h-18h · <a href="tel:{TELI}">📞 {TEL}</a></span></div></div>
+<header><div class="w"><a class="logo" href="/"><svg class="lg" viewBox="0 0 210 56" width="170" height="46" role="img" aria-label="ISO + façade et isolation"><rect x="2" y="6" width="44" height="44" rx="12" fill="#0A4FCB"/><path d="M12 30 24 19l12 11v12H12z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M19 42v-8h10v8" fill="#F5A524"/><text x="56" y="34" font-family="Manrope,Arial" font-weight="800" font-size="26" fill="#14141A">ISO</text><text x="106" y="34" font-family="Manrope,Arial" font-weight="800" font-size="30" fill="#F5A524">+</text><text x="57" y="49" font-family="Inter,Arial" font-weight="600" font-size="10" letter-spacing="2.2" fill="#4a4a52">FAÇADE · ISOLATION</text></svg></a>
 <nav id="nav"><a href="/">Accueil</a><div class="dd"><a href="/#services">Prestations ▾</a><div>{servs}</div></div><a href="/communes/">Communes</a><a href="/blog/">Conseils</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
 <a class="btn" href="tel:{TELI}">📞 {TEL}</a><button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('on')">☰</button></div></header>
 <main>{body}</main>
 <section class="fin"><div class="w"><h2>Votre façade mérite le meilleur</h2><p>Visite, diagnostic et devis écrit gratuits. Travaux garantis 10 ans.</p><div class="cta"><a class="btn d" href="/contact/">Demander mon devis gratuit</a><a class="btn o" href="tel:{TELI}">📞 {TEL}</a></div></div></section>
-<footer><div class="w"><div><a class="logo" href="/"><img src="{LOGO}" alt="ISO +" width="52" height="52"><b style="color:#fff">ISO +</b></a><p style="margin-top:12px">{DESC}</p><div class="trust"><img src="{RGE}" alt="Certification RGE Qualibat"></div></div>
+<footer><div class="w"><div><a class="logo" href="/"><svg class="lg" viewBox="0 0 210 56" width="170" height="46" role="img" aria-label="ISO + façade et isolation"><rect x="2" y="6" width="44" height="44" rx="12" fill="#0A4FCB"/><path d="M12 30 24 19l12 11v12H12z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M19 42v-8h10v8" fill="#F5A524"/><text x="56" y="34" font-family="Manrope,Arial" font-weight="800" font-size="26" fill="#fff">ISO</text><text x="106" y="34" font-family="Manrope,Arial" font-weight="800" font-size="30" fill="#F5A524">+</text><text x="57" y="49" font-family="Inter,Arial" font-weight="600" font-size="10" letter-spacing="2.2" fill="#9aa4ae">FAÇADE · ISOLATION</text></svg></a><p style="margin-top:12px">{DESC}</p><div class="trust"><img src="{RGE}" alt="Certification RGE Qualibat"></div></div>
 <div><h3>Prestations</h3>{servs}</div><div><h3>Communes</h3>{''.join(f'<a href="/{slugc(c[0])}/">Façade {c[0]}</a>' for c in COM[:8])}<a href="/communes/">Toutes les communes →</a></div>
 <div><h3>Contact</h3><a href="tel:{TELI}">📞 {TEL}</a><a href="mailto:{MAIL}">✉️ {MAIL}</a><p>{ADR}</p><p>Lun-Sam : 9h-18h</p><a href="/contact/">Formulaire de devis</a><a href="/mentions-legales/">Mentions légales</a></div></div></footer>
 <div class="bar"><a href="tel:{TELI}">📞 Appeler</a><a href="/contact/">Devis gratuit</a></div></body></html>"""
@@ -200,15 +200,15 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 LB = {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","@id":SITE+"/#entreprise","name":NOM,"description":DESC,"url":SITE+"/","telephone":TELI,"email":MAIL,"image":P[0],"logo":LOGO,
  "address":{"@type":"PostalAddress","streetAddress":"62 Rue du Général Sarrail","postalCode":"76360","addressLocality":"Barentin","addressCountry":"FR"},
  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:00"}],
- "areaServed":[{"@type":"City","name":c[0]} for c in COM],"hasCredential":{"@type":"EducationalOccupationalCredential","name":"RGE Qualibat"},
+ "areaServed":[{"@type":"AdministrativeArea","name":"Seine-Maritime"}]+[{"@type":"City","name":c[0]} for c in COM],"hasCredential":{"@type":"EducationalOccupationalCredential","name":"RGE Qualibat"},
  "sameAs":["https://instagram.com/isoplusfacade","https://www.pagesjaunes.fr/pros/62536500"]}
 
 def faqhtml(fq, t="Questions fréquentes"):
     return f'<section class="bg faq"><div class="w prose" style="margin:auto"><h2>{t}</h2>' + "".join(f"<details open><summary>{q}</summary><p>{a}</p></details>" for q,a in fq) + "</div></section>"
 def faqschema(fq): return {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}
 def hero(img, h1, lead, pts, crumb=""):
-    return f'<section class="hero" style="background-image:url({img})"><div class="w">{crumb}<h1>{h1}</h1><p class="l">{lead}</p><ul>{"".join(f"<li>{p}</li>" for p in pts)}</ul><div class="cta"><a class="btn" href="/contact/">Devis gratuit en 24 h</a><a class="btn o" href="tel:{TELI}">📞 {TEL}</a></div></div></section>'
-STATS = '<section class="stats"><div class="w"><div><b>Gratuit</b>Visite et devis</div><div><b>RGE</b>Qualibat</div><div><b>10 ans</b>Garantie décennale</div><div><b>21</b>Communes</div><div><b>1</b>Seul interlocuteur</div></div></section>'
+    return f'<section class="hero" style="background-image:url({img})"><div class="w">{crumb}<h1>{h1}</h1><p class="l">{lead}</p><ul>{"".join(f"<li>{p}</li>" for p in pts)}</ul><div class="cta"><a class="btn a" href="/contact/">Devis gratuit en 24 h</a><a class="btn o" href="tel:{TELI}">📞 {TEL}</a></div></div></section>'
+STATS = '<section class="stats"><div class="w"><div><b>Gratuit</b>Visite et devis</div><div><b>RGE</b>Qualibat</div><div><b>10 ans</b>Garantie décennale</div><div><b>76</b>Toute la Seine-Maritime</div><div><b>1</b>Seul interlocuteur</div></div></section>'
 def cards():
     return '<div class="grid">' + "".join(f'<article class="card"><img src="{s["img"]}" alt="{s["nom"]} réalisé par ISO + près de Rouen" loading="lazy"><div class="in"><span class="n">0{i+1}</span><h3>{s["ic"]} {s["nom"]}</h3><p>{s["court"]}</p><a class="m" href="/{s["slug"]}/">Voir la prestation →</a></div></article>' for i,s in enumerate(SERV)) + "</div>"
 def tags(): return '<div class="tags">' + "".join(f'<a href="/{slugc(c[0])}/">{c[0]}</a>' for c in COM) + "</div>"
@@ -225,7 +225,7 @@ def build():
     b += f'<section class="bg"><div class="w g2"><div><h2>Pourquoi isoler par l\'extérieur pendant votre ravalement ?</h2><p>{SERV[2]["direct"]}</p><div class="box"><b>Bon à savoir :</b> l\'échafaudage est monté une seule fois. Ravalement et isolation dans le même chantier, c\'est moins de frais et une façade neuve.</div><a class="btn" href="/isolation-thermique-exterieur-rouen/">Découvrir l\'ITE</a></div><img src="{P[2]}" alt="Isolation thermique par l\'extérieur d\'une maison près de Rouen" style="border-radius:20px" loading="lazy"></div></section>'
     b += f'<section class="dark"><div class="w"><h2>Comment se passe votre projet ?</h2><p style="margin-bottom:30px">Quatre étapes simples, sans surprise.</p>{STEPS}</div></section>'
     b += '<section><div class="w g2"><div class="urg"><h2>Le climat normand use vos façades</h2><p>Pluie fréquente, humidité, mousses et vent sur les plateaux : un enduit fissuré laisse entrer l\'eau, et un mur humide isole mal. Un diagnostic gratuit permet de savoir s\'il faut nettoyer, repeindre, ravaler ou isoler.</p></div><div><h3>💧 Humidité et infiltrations</h3><p>Fissures et enduits poreux laissent passer l\'eau.</p><h3>🌿 Mousses et lichens</h3><p>Ils noircissent la façade et dégradent le support.</p><h3>🌬️ Vent des plateaux</h3><p>Il refroidit les murs mal isolés et augmente le chauffage.</p></div></div></section>'
-    b += f'<section class="bg"><div class="w"><h2>Zones d\'intervention : Rouen et la Métropole</h2><p style="margin-bottom:20px">Depuis Barentin, ISO + intervient à Rouen, sur le plateau Est, le plateau Nord, la vallée du Cailly et la rive gauche.</p>{tags()}</div></section>'
+    b += f'<section class="bg"><div class="w"><h2>Zones d\'intervention : Rouen et la Métropole</h2><p style="margin-bottom:20px">Depuis Barentin, ISO + intervient dans toute la Seine-Maritime : Rouen, le plateau Est, le plateau Nord, la vallée du Cailly et la rive gauche.</p>{tags()}</div></section>'
     b += '<section><div class="w"><h2>Nos conseils façade et isolation</h2><div class="grid">' + "".join(f'<article class="card"><img src="{P[i+3]}" alt="{a["t"]}" loading="lazy"><div class="in"><h3>{a["t"]}</h3><p>{a["intro"][:130]}…</p><a class="m" href="/blog/{a["slug"]}/">Lire le conseil →</a></div></article>' for i,a in enumerate(BLOG)) + '</div></div></section>'
     b += faqhtml(GFAQ)
     page("index.html", "Ravalement de façade et isolation à Rouen | ISO +", "ISO +, ravalement de façade, peinture extérieure et isolation par l'extérieur à Rouen et dans la Métropole. RGE Qualibat. Devis gratuit.", b, [faqschema(GFAQ)])
