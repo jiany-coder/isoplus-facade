@@ -182,7 +182,7 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{P[0]}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css"><link rel="icon" href="{LOGO}">
+<link rel="stylesheet" href="/style.css?v=3"><link rel="icon" href="{LOGO}">
 {''.join('<script type="application/ld+json">'+json.dumps(s,ensure_ascii=False)+'</script>' for s in sch)}</head><body>
 <div class="top"><div class="w"><span class="z">📍 Intervention dans toute la Seine-Maritime (76) · Devis gratuit et sans engagement</span><span>Lun-Sam 9h-18h · <a href="tel:{TELI}">📞 {TEL}</a></span></div></div>
 <header><div class="w"><a class="logo" href="/"><svg class="lg" viewBox="0 0 210 56" width="170" height="46" role="img" aria-label="ISO + façade et isolation"><rect x="2" y="6" width="44" height="44" rx="12" fill="#0A4FCB"/><path d="M12 30 24 19l12 11v12H12z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M19 42v-8h10v8" fill="#F5A524"/><text x="56" y="34" font-family="Manrope,Arial" font-weight="800" font-size="26" fill="#14141A">ISO</text><text x="106" y="34" font-family="Manrope,Arial" font-weight="800" font-size="30" fill="#F5A524">+</text><text x="57" y="49" font-family="Inter,Arial" font-weight="600" font-size="10" letter-spacing="2.2" fill="#4a4a52">FAÇADE · ISOLATION</text></svg></a>
@@ -219,7 +219,7 @@ def build():
     shutil.rmtree(D, ignore_errors=True); os.makedirs(D)
     open(f"{D}/style.css","w").write(CSS)
     # accueil
-    b = hero(P[0], "Ravalement de façade et isolation <span>à Rouen</span>", "ISO + rénove, repeint et isole les façades des maisons de Rouen et de toute la Métropole. Entreprise certifiée RGE Qualibat, basée à Barentin.",
+    b = hero(P[0], "Ravalement de façade et isolation <span>à Rouen</span>", "ISO + rénove, repeint et isole les façades des maisons de Rouen et de toute la Seine-Maritime. Entreprise certifiée RGE Qualibat, basée à Barentin.",
              ["Ravalement, peinture extérieure, nettoyage, bardage", "Isolation thermique par l'extérieur éligible aux aides", "Visite et devis écrit gratuits, garantie décennale"]) + STATS
     b += f'<section id="services"><div class="w"><h2>Nos prestations façade et isolation</h2><p style="margin-bottom:30px">Un seul interlocuteur du diagnostic à la réception du chantier, pour toute la Métropole rouennaise.</p>{cards()}</div></section>'
     b += f'<section class="bg"><div class="w g2"><div><h2>Pourquoi isoler par l\'extérieur pendant votre ravalement ?</h2><p>{SERV[2]["direct"]}</p><div class="box"><b>Bon à savoir :</b> l\'échafaudage est monté une seule fois. Ravalement et isolation dans le même chantier, c\'est moins de frais et une façade neuve.</div><a class="btn" href="/isolation-thermique-exterieur-rouen/">Découvrir l\'ITE</a></div><img src="{P[2]}" alt="Isolation thermique par l\'extérieur d\'une maison près de Rouen" style="border-radius:20px" loading="lazy"></div></section>'
