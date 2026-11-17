@@ -4,7 +4,7 @@ h1,h2,h3{font-family:Barlow,sans-serif;color:var(--k);line-height:1.05;font-weig
 a{color:var(--k)}img{max-width:100%;display:block}.w{max-width:1240px;margin:auto;padding:0 24px}section{padding:100px 0}p{max-width:70ch}
 section>.w>h2:before,.prose>h2:first-child:before,.kick{content:"ISO + · FAÇADE & ISOLATION";display:inline-block;font:800 .7rem Inter;letter-spacing:.22em;color:var(--k);background:rgba(48,175,255,.16);padding:8px 14px;border-radius:999px;margin-bottom:18px}
 .dark section>.w>h2:before,.dark>.w>h2:before{background:rgba(48,175,255,.18);color:var(--b)}
-.top{background:var(--k);color:#c9ccd1;font-size:.82rem;padding:9px 0;letter-spacing:.02em}.top .w{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.top a{color:#fff;font-weight:700;text-decoration:none}.top b{color:var(--b)}
+.top{background:var(--k);color:#c9ccd1;font-size:.82rem;padding:9px 0;letter-spacing:.02em}.top .w{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.top a{color:#fff;font-weight:700;text-decoration:none}.top b{color:var(--b)}
 header{position:sticky;top:10px;z-index:50;height:0}header .w{display:flex;align-items:center;justify-content:space-between;height:70px;background:#fff;border-radius:999px;box-shadow:0 18px 50px rgba(0,0,0,.18);padding:0 10px 0 22px;margin-top:10px;max-width:1240px;width:calc(100% - 24px)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}.lgi{height:96px;width:96px;margin:-16px 0 -16px -6px;border:4px solid #fff;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,.15)}footer .lgi{height:72px;width:72px}
 nav{display:flex;gap:26px;align-items:center}nav a{color:var(--k);text-decoration:none;font-weight:600;font-size:.95rem}nav a:hover{color:var(--bd)}
