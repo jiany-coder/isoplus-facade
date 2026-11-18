@@ -84,7 +84,7 @@ nav a{position:relative}nav>a:after{content:"";position:absolute;left:0;right:0;
 .sc .lnk{margin-top:auto;padding-top:8px}
 /* réalisations */
 .gal2{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
-.gal2 figure{position:relative;border-radius:18px;overflow:hidden;margin:0}.gal2 figure:nth-child(1){grid-column:span 2;grid-row:span 2}.gal2 figure:nth-child(4){grid-row:span 2}
+.gal2 figure{position:relative;border-radius:18px;overflow:hidden;margin:0}.gal2 figure:nth-child(1){grid-column:span 2;grid-row:span 2}
 .gal2 img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.gal2 figure:hover img{transform:scale(1.06)}
 .gal2 figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--k);font:700 .8rem Inter;padding:7px 12px;border-radius:999px}
 .ba{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/9;background:#222;user-select:none}
@@ -105,10 +105,10 @@ nav a{position:relative}nav>a:after{content:"";position:absolute;left:0;right:0;
 .st p{margin:0 auto;font-size:.95rem}
 /* focus */
 .focus{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.fc{position:relative;border-radius:26px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;color:#fff}
+.fc{text-decoration:none;position:relative;border-radius:26px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;color:#fff}
 .fc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}.fc:hover img{transform:scale(1.05)}
 .fc:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,15,.88) 10%,rgba(10,12,15,.1) 70%)}
-.fc .ct{position:relative;z-index:1;padding:34px}.fc h3{color:#fff;font-size:clamp(1.5rem,2.6vw,2.1rem)}.fc ul{list-style:none;margin:14px 0 22px;display:grid;gap:6px}.fc li{display:flex;gap:8px;align-items:center;font-size:.95rem}.fc li .i{color:#7fd65f}
+.fc .eb{color:#fff}.fc .ct{position:relative;z-index:1;padding:34px}.fc h3{color:#fff;font-size:clamp(1.5rem,2.6vw,2.1rem)}.fc ul{list-style:none;margin:14px 0 22px;display:grid;gap:6px}.fc li{display:flex;gap:8px;align-items:center;font-size:.95rem}.fc li .i{color:#7fd65f}
 /* zone */
 .zone{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
 .zmap{position:relative;aspect-ratio:1;border-radius:28px;background:radial-gradient(circle at 50% 50%,rgba(5,130,219,.14),rgba(5,130,219,.02) 60%),#fff;border:1px solid var(--line);overflow:hidden}
@@ -147,10 +147,10 @@ nav a,.btn,.call{white-space:nowrap}nav{gap:22px}.hx .eb{color:#fff}.hx .eb:befo
  .chips2 li{font-size:.8rem;padding:8px 12px}
  .trustbar .w{grid-template-columns:1fr 1fr;padding:0}.tb{padding:18px 14px;flex-direction:column;align-items:flex-start;gap:10px}.tb:nth-child(3){border-left:0}.tb:nth-child(n+3){border-top:1px solid var(--line)}
  .sc,.sc.big{grid-column:1/-1}.sgrid{gap:16px}
- .gal2{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gal2 figure:nth-child(1){grid-column:span 2}.gal2 figure:nth-child(4){grid-row:span 1}
+ .gal2{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gal2 figure:nth-child(1){grid-column:span 2}
  .why,.focus,.zone,.dv .w,.f2{grid-template-columns:1fr}.f2 .full{grid-column:auto}
  .steps2{grid-template-columns:1fr;gap:26px}.steps2:before{display:none}.st{text-align:left;display:grid;grid-template-columns:56px 1fr;gap:4px 16px}.st .n{margin:0;grid-row:span 2}.st h3{margin:0;align-self:end}.st p{margin:0}
- .fc{min-height:380px}.fc .ct{padding:24px}.fcard{padding:24px}.zmap{max-width:420px}
+ .fc{min-height:380px}.fc .eb{color:#fff}.fc .ct{padding:24px}.fcard{padding:24px}.zmap{max-width:420px}
  .sh{margin-bottom:28px}.soon{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:400px){h1{font-size:2.05rem}.lgs{height:40px!important}}
@@ -202,12 +202,12 @@ def home(g):
 <div class="tb"><div class="ib">{ic("pin",24)}</div><div><b>Seine-Maritime</b><span>Basés à Barentin, près de Rouen</span></div></div></div></section>'''
     cards = ""
     for i, s in enumerate(SERV):
-        big = " big" if i in (0, 2) else ""
+        big = " big" if i in (0, 1, 5, 6) else ""
         cards += f'''<a class="sc rv{big}" href="/{s["slug"]}/"><div class="im"><img src="{s["img"]}" alt="{s["nom"]} réalisé par ISO + en Seine-Maritime" loading="lazy"><span class="bad">{ic(SICON[s["slug"]],22)}</span><span class="num">0{i+1}</span></div><div class="bd"><h3>{s["nom"]}</h3><p>{SBEN[s["slug"]]}</p><span class="lnk">{SCTA.get(s["slug"],"Faire estimer mes travaux")} {ic("arrow",18)}</span></div></a>'''
     # 7 cartes : 6+6 / 4+4+4 / 6 ... -> rangées équilibrées
     b += f'''<section id="services"><div class="w"><div class="sh"><div><p class="eb">Nos prestations</p><h2>Tout pour votre façade, en un seul artisan</h2></div><p>Maisons individuelles, bâtiments tertiaires, collectivités et copropriétés : ISO + traite la façade de A à Z, avec des produits adaptés au climat normand.</p></div>
 <div class="sgrid">{cards}</div></div></section>'''
-    figs = [(P[0],"Façade enduite et soubassement"),(P[1],"Peinture de façade"),(P[2],"Isolation par l'extérieur"),(P[4],"Rénovation de façade"),(P[3],"Ravalement"),(P[5],"Chantier ISO +")]
+    figs = [(P[0],"Façade enduite et soubassement"),(P[1],"Peinture de façade"),(P[2],"Isolation par l'extérieur"),(P[4],"Rénovation de façade"),(P[3],"Ravalement")]
     b += f'''<section class="bg"><div class="w"><div class="sh"><div><p class="eb">Réalisations</p><h2>Donnez une nouvelle vie à votre façade</h2></div><p>Quelques chantiers réalisés par ISO +. Chaque façade est différente : la visite gratuite permet de choisir la bonne solution.</p></div>
 <div class="gal2">{"".join(f'<figure class="rv"><img src="{u}" alt="{c} réalisée par ISO + en Seine-Maritime" loading="lazy"><figcaption>{c}</figcaption></figure>' for u,c in figs)}</div>
 <div class="soon rv"><div class="ib">{ic("camera",26)}</div><div><h3 style="margin-bottom:4px">Avant / après : la galerie s'enrichit</h3><p>Les comparatifs avant / après de nos prochains chantiers seront publiés ici, avec la commune et le type de travaux.</p></div><a class="btn ghost" href="#devis-form" style="margin-left:auto">Faire estimer ma façade</a></div></div></section>'''

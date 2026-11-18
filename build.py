@@ -192,6 +192,8 @@ footer{background:#0a0b0c;color:#8f949b;padding:80px 0 110px;font-size:.92rem}fo
 .grid,.steps,.g2,footer .w,.hero .w{grid-template-columns:1fr}.seal{justify-self:start;width:150px;height:150px}.seal .mid{inset:32px;font-size:.8rem}.seal .mid img{width:40px}.hero{padding:130px 0 60px}.hero .glass{padding:26px}.stats .w{grid-template-columns:repeat(2,1fr)}section{padding:64px 0}.bar{display:grid}.top .z{display:none}}
 """
 
+import hashlib
+CV = hashlib.md5((CSS+ui.CSS2+ui.JS).encode()).hexdigest()[:8]
 def page(path, title, desc, body, schema=None, crumbs=None):
     url = SITE + "/" + (path.replace("index.html","") if path.endswith("index.html") else path)
     sch = [LB]
@@ -203,7 +205,7 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{P[0]}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=20"><link rel="icon" href="/logo.jpg"><link rel="apple-touch-icon" href="/logo.jpg">
+<link rel="stylesheet" href="/style.css?v={CV}"><link rel="icon" href="/logo.jpg"><link rel="apple-touch-icon" href="/logo.jpg">
 {''.join('<script type="application/ld+json">'+json.dumps(s,ensure_ascii=False)+'</script>' for s in sch)}</head><body>
 <div class="top"><div class="w"><span class="z">📍 Intervention dans <b>toute la Seine-Maritime (76)</b> · Devis gratuit et sans engagement</span></div></div>
 <header><div class="w"><a class="logo" href="/"><svg class="lgs" viewBox="0 0 300 72" width="250" height="60" role="img" aria-label="ISO + Votre partenaire façadier"><rect x="0" y="0" width="72" height="72" rx="16" fill="#0582DB"/><g fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 33 36 15l22 18"/><path d="M48 25v-6"/><path d="M21 33 36 21l15 12v19H21z"/></g><text x="86" y="40" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="34" fill="#0582DB" letter-spacing="-.5">ISO +</text><text x="87" y="62" font-family="Georgia,'Times New Roman',serif" font-size="16.5" fill="#1b1c1f">Votre partenaire façadier</text></svg></a>
@@ -214,7 +216,7 @@ def page(path, title, desc, body, schema=None, crumbs=None):
 <footer><div class="w"><div><a class="logo" href="/"><svg class="lgs lgf" viewBox="0 0 300 72" width="250" height="60" role="img" aria-label="ISO + Votre partenaire façadier"><rect x="0" y="0" width="72" height="72" rx="16" fill="#0582DB"/><g fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 33 36 15l22 18"/><path d="M48 25v-6"/><path d="M21 33 36 21l15 12v19H21z"/></g><text x="86" y="40" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="34" fill="#fff" letter-spacing="-.5">ISO +</text><text x="87" y="62" font-family="Georgia,'Times New Roman',serif" font-size="16.5" fill="#c9ccd1">Votre partenaire façadier</text></svg></a><p style="margin-top:12px">{DESC}</p><div class="trust"><img src="{RGE}" alt="Certification RGE Qualibat"></div></div>
 <div><h3>Prestations</h3>{servs}</div><div><h3>Communes</h3>{''.join(f'<a href="/{slugc(c[0])}/">Façade {c[0]}</a>' for c in COM[:8])}<a href="/communes/">Toutes les communes →</a></div>
 <div><h3>Contact</h3><a href="tel:{TELI}">📞 {TEL}</a><a href="mailto:{MAIL}">✉️ {MAIL}</a><p>{ADR}</p><p>Lun-Sam : 9h-18h</p><a href="/contact/">Formulaire de devis</a><a href="/mentions-legales/">Mentions légales</a></div></div></footer>
-<script src="/app.js?v=20" defer></script><div class="bar"><a href="tel:{TELI}">{ui.ic("phone",18)} Appeler ISO +</a><a href="{'#devis-form' if 'id="devis-form"' in body else '/contact/'}">{ui.ic("file",18)} Demander un devis</a></div></body></html>"""
+<script src="/app.js?v={CV}" defer></script><div class="bar"><a href="tel:{TELI}">{ui.ic("phone",18)} Appeler ISO +</a><a href="{'#devis-form' if 'id="devis-form"' in body else '/contact/'}">{ui.ic("file",18)} Demander un devis</a></div></body></html>"""
     html = html.replace('href="/', 'href="'+BASE+'/').replace('src="/', 'src="'+BASE+'/').replace(BASE+'//', '//'); f = os.path.join(D, path); os.makedirs(os.path.dirname(f), exist_ok=True); open(f,"w").write(html)
     PAGES.append(url)
 
