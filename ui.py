@@ -137,7 +137,8 @@ nav a{position:relative}nav>a:after{content:"";position:absolute;left:0;right:0;
 /* footer & barre mobile */
 .bar{gap:0;box-shadow:0 -10px 30px rgba(0,0,0,.15)}.bar a{display:flex;align-items:center;justify-content:center;gap:8px}.bar a:first-child{background:linear-gradient(180deg,#58cc35,#3a9f1f)}.bar a:last-child{background:linear-gradient(180deg,#1b95ea,#0476c7);color:#fff}
 .fin .btn.d{background:#fff;color:var(--k)!important}
-@media(max-width:1100px){.hcta .btn{display:none}}
+nav a,.btn,.call{white-space:nowrap}nav{gap:22px}.hx .eb{color:#fff}.hx .eb:before{background:var(--bl)}
+@media(max-width:1280px){.hcta .btn{display:none}nav{gap:18px}nav a{font-size:.9rem}}
 @media(max-width:960px){
  body{padding-bottom:62px}
  .hx{padding:120px 0 0;min-height:auto}.hx .w{grid-template-columns:1fr;padding-bottom:30px}.hx .mwrap{display:none}
